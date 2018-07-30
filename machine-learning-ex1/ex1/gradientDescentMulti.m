@@ -17,12 +17,12 @@ for iter = 1:num_iters
     %       of the cost function (computeCostMulti) and gradient here.
     %
 
+    predictions = X*theta;
 
+    errors=predictions-y;
+    delta = 1/m * sum(errors.*X);
 
-
-
-
-
+    theta = theta - alpha*delta';
 
 
 
